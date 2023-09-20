@@ -5,7 +5,6 @@ import Contact from "../src/components/Contact";
 import Services from "../src/components/Services";
 import TypingAnimation from "../src/components/TypingAnimation";
 import Layout from "../src/layout/Layout";
-import Resume from '../public/Frontend_Developer_Resume_Lucas_Jessop.pdf'
 const Portfolio = dynamic(() => import("../src/components/Portfolio"), {
   ssr: false,
 });
@@ -25,7 +24,7 @@ const Index = () => {
                   <h6>Hello, my name is</h6>
                   <h1 className="font-alt">Lucas Jessop</h1>
                   <p className="lead">
-                    I Am Passionate <TypingAnimation />
+                    I Am A <TypingAnimation />
                   </p>
                   <p className="desc">
                     I develop web sites for customers of all sizes,
@@ -33,15 +32,15 @@ const Index = () => {
                     services and online stores.
                   </p>
                   <div className="btn-bar">
-                    <a className="px-btn px-btn-theme" download href={Resume}>
-                      Donwload CV
+                    <a className="px-btn px-btn-theme" href="#contactus">
+                      Contact Me
                     </a>
                   </div>
                 </div>
               </div>
               <div className="col-lg-6">
                 <div className="hb-img">
-                  <img src="static/img/home-banner.png" title="" alt="" />
+                  <img src="static/img/home-banner.png" title="" alt="" style={{borderRadius: '50%'}} />
                 </div>
               </div>
             </div>
@@ -56,7 +55,7 @@ const Index = () => {
       <Services />
       {/* End Services */}
       {/* Portfolio */}
-      <Portfolio />
+      {/* <Portfolio /> */}
       {/* End Portfolio */}
       {/* Blog */}
       <Blog />

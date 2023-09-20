@@ -38,29 +38,29 @@ const Header = ({ blog }) => {
           <div className="hl-top">
             <div className="hl-logo">
               <div className="img">
-                <img src="static/img/about-me.jpg" title="" alt="" />
+                <img src="https://media.licdn.com/dms/image/D5603AQG77Law2kJMPw/profile-displayphoto-shrink_200_200/0/1692375857055?e=1700697600&v=beta&t=ZA4ZFowv7Pm9Eje-6AnhowKAXMFvSsRI3bhL8P2QCAs" alt="profile" />
               </div>
-              <h5>Sergiobi</h5>
+              <h5>Lucas</h5>
             </div>
           </div>
           {blog ? <MenuWithBlog /> : <MenuWithOutBlog />}
         </div>
         <div className="nav justify-content-center social-icons">
-          <a href="#">
+          {/* <a href="#">
             <i className="fab fa-facebook-f" />
-          </a>
-          <a href="#">
+          </a> */}
+          {/* <a href="#">
             <i className="fab fa-twitter" />
-          </a>
-          <a href="#">
+          </a> */}
+          <a href="https://www.instagram.com/luke_jessop_jr/">
             <i className="fab fa-instagram" />
           </a>
-          <a href="#">
+          <a href="https://www.linkedin.com/in/lucas-jessop-7861ab187/">
             <i className="fab fa-linkedin-in" />
           </a>
-          <a href="#">
+          {/* <a href="#">
             <i className="fab fa-pinterest" />
-          </a>
+          </a> */}
         </div>
       </header>
     </Fragment>
@@ -89,12 +89,12 @@ const MenuWithOutBlog = () => {
           <span>Services</span>
         </a>
       </li>
-      <li data-menuanchor="work">
+      {/* <li data-menuanchor="work">
         <a className="nav-link" href="#work">
           <i className="ti-bookmark-alt" />
           <span>Portfolio</span>
         </a>
-      </li>
+      </li> */}
       <li data-menuanchor="blog" className="blog">
         <a className="nav-link" href="#blog">
           <i className="ti-layout-media-overlay-alt-2" />
@@ -145,14 +145,14 @@ const MenuWithBlog = () => {
             </a>
           </Link>
         </li>
-        <li data-menuanchor="work">
+        {/* <li data-menuanchor="work">
           <Link href="/#work">
             <a className="nav-link">
               <i className="ti-bookmark-alt" />
               <span>Portfolio</span>
             </a>
           </Link>
-        </li>
+        </li> */}
         <li data-menuanchor="blog" className="blog active">
           <Link href="/#blog">
             <a className="nav-link">

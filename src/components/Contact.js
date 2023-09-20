@@ -67,17 +67,17 @@ const Contact = () => {
               <ul>
                 <li className="media">
                   <i className="ti-map" />
-                  <span className="media-body">
-                    123 Stree New York City , United States Of America 750065.
+                  <span className="media-body" style={{fontSize: '14px'}}>
+                    Draper, Utah
                   </span>
                 </li>
                 <li className="media">
                   <i className="ti-email" />
-                  <span className="media-body">support@domain.com</span>
+                  <span className="media-body" style={{fontSize: '14px'}}>inquiry.lucasjessop@gmail.com</span>
                 </li>
                 <li className="media">
                   <i className="ti-mobile" />
-                  <span className="media-body">+044 9696 9696 3636</span>
+                  <span className="media-body" style={{fontSize: '14px'}}>(435) 212-1134</span>
                 </li>
               </ul>
             </div>
@@ -186,7 +186,7 @@ const Contact = () => {
               </form>
             </div>
           </div>
-          <div className="col-12">
+          {/* <div className="col-12">
             <div className="google-map">
               <div className="embed-responsive embed-responsive-21by9">
                 <iframe
@@ -196,7 +196,7 @@ const Contact = () => {
                 />
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
