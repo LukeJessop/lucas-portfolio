@@ -23,22 +23,22 @@ const About = () => {
               </div>
               <div className="about-text">
                 <h3>
-                  {`I'm`} a Freelancer Front-end Developer with over 3 years of
+                  {`I'm`} a Full-Stack Developer with over 3 years of
                   experience.{" "}
                 </h3>
                 <p>
-                  {`I'm`} a Freelancer Front-end Developer with over 3 years of
-                  experience. {`I'm`} from San Francisco. I code and create web
-                  elements for amazing people around the world. I like work with
-                  new people. New people new Experiences.
+                  {`I'm`} a Full-Stack Developer with over 3 years of
+                  experience. {`I'm`} from Draper, Utah. I code and create quality web
+                  elements for amazing people around the world. During my free time I 
+                  Like to create <a href="https://www.youtube.com/channel/UChaN9QPqE1a5tqPCfbN3zGw">youtube</a> videos.
                 </p>
                 <div className="row">
                   <div className="col-auto">
                     <div className="media align-items-center">
-                      <span className="count">5k</span>
+                      <span className="count">5</span>
                       <div className="media-body">
-                        Projects <br />
-                        Completed.
+                        Youtube <br />
+                        Subscribers
                       </div>
                     </div>
                   </div>

@@ -5,6 +5,7 @@ import Contact from "../src/components/Contact";
 import Services from "../src/components/Services";
 import TypingAnimation from "../src/components/TypingAnimation";
 import Layout from "../src/layout/Layout";
+import Resume from '../public/Frontend_Developer_Resume_Lucas_Jessop.pdf'
 const Portfolio = dynamic(() => import("../src/components/Portfolio"), {
   ssr: false,
 });
@@ -21,18 +22,18 @@ const Index = () => {
             <div className="row full-screen align-items-center">
               <div className="col-lg-6">
                 <div className="type-box">
-                  <h6>Hello, I am</h6>
-                  <h1 className="font-alt">Sergio Gadot</h1>
+                  <h6>Hello, my name is</h6>
+                  <h1 className="font-alt">Lucas Jessop</h1>
                   <p className="lead">
                     I Am Passionate <TypingAnimation />
                   </p>
                   <p className="desc">
-                    I design and develop services for customers of all sizes,
+                    I develop web sites for customers of all sizes,
                     specializing in creating stylish, modern websites, web
                     services and online stores.
                   </p>
                   <div className="btn-bar">
-                    <a className="px-btn px-btn-theme" href="#">
+                    <a className="px-btn px-btn-theme" download href={Resume}>
                       Donwload CV
                     </a>
                   </div>
