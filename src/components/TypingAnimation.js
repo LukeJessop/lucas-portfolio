@@ -6,7 +6,7 @@ const TypingAnimation = () => {
 
   useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ["Web Developer", "Video Editor", "Scrum Master"], // Strings to display
+      strings: ["Web Developer", "Video Editor", "Scrum Master", "Stage Technician", "Lighting Designer"], // Strings to display
       typeSpeed: 100,
       backSpeed: 25,
       backDelay: 120,

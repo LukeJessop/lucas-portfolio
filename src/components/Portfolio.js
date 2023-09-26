@@ -1,5 +1,92 @@
 import Isotope from "isotope-layout";
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
+import exploroImg from "./assets/exploro.jpeg";
+
+const portfolioData = [
+  {
+    className: "grid-item product website",
+    title: "Exploro.com",
+    category: "Travel Website",
+    imgSrc: exploroImg,
+    imgTitle: "exploro",
+    imgAlt: "exploro",
+    link: "https://exploro.com",
+  },
+  {
+    className: "grid-item video-editing",
+    title: "Momb ios App",
+    category: "Broadcasting ios App",
+    imgSrc: exploroImg,
+    imgTitle: "",
+    imgAlt: "",
+    link: "static/img/m-portfolio-2.jpg",
+  },
+  {
+    className: "grid-item product website",
+    title: "Pokemon Fighters",
+    category: "Video Game Website",
+    imgSrc: exploroImg,
+    imgTitle: "",
+    imgAlt: "",
+    link: "static/img/m-portfolio-3.jpg",
+  },
+  {
+    className: "grid-item product video-editing",
+    title: "Momb ios App",
+    category: "Broadcasting ios App",
+    imgSrc: exploroImg,
+    imgTitle: "",
+    imgAlt: "",
+    link: "static/img/m-portfolio-5.jpg",
+  },
+  {
+    className: "grid-item website",
+    title: "Momb ios App",
+    category: "Broadcasting ios App",
+    imgSrc: exploroImg,
+    imgTitle: "",
+    imgAlt: "",
+    link: "static/img/m-portfolio-4.jpg",
+  },
+  {
+    className: "grid-item product video-editing",
+    title: "Momb ios App",
+    category: "Broadcasting ios App",
+    imgSrc: exploroImg,
+    imgTitle: "",
+    imgAlt: "",
+    link: "static/img/m-portfolio-6.jpg",
+  },
+  {
+    className: "grid-item stage",
+    title: "Momb ios App",
+    category: "Broadcasting ios App",
+    imgSrc: exploroImg,
+    imgTitle: "",
+    imgAlt: "",
+    link: "static/img/m-portfolio-7.jpg",
+  },
+  {
+    className: "grid-item product website",
+    title: "Momb ios App",
+    category: "Broadcasting ios App",
+    imgSrc: exploroImg,
+    imgTitle: "",
+    imgAlt: "",
+    link: "static/img/m-portfolio-8.jpg",
+  },
+  {
+    className: "grid-item stage",
+    title: "Momb ios App",
+    category: "Broadcasting ios App",
+    imgSrc: exploroImg,
+    imgTitle: "",
+    imgAlt: "",
+    link: "static/img/m-portfolio-9.jpg",
+  },
+];
+
 const Portfolio = () => {
   // Isotope
   const isotope = useRef();
@@ -51,23 +138,23 @@ const Portfolio = () => {
               All
             </li>
             <li
-              className={`c-pointer ${activeBtn("branding")}`}
-              onClick={handleFilterKeyChange("branding")}
-              data-filter=".branding"
+              className={`c-pointer ${activeBtn("website")}`}
+              onClick={handleFilterKeyChange("website")}
+              data-filter=".website"
             >
               Websites
             </li>
             <li
-              className={`c-pointer ${activeBtn("photoshop")}`}
-              onClick={handleFilterKeyChange("photoshop")}
-              data-filter=".photoshop"
+              className={`c-pointer ${activeBtn("video-editing")}`}
+              onClick={handleFilterKeyChange("video-editing")}
+              data-filter=".video-editing"
             >
               Videos
             </li>
             <li
-              className={`c-pointer ${activeBtn("fashion")}`}
-              onClick={handleFilterKeyChange("fashion")}
-              data-filter=".fashion"
+              className={`c-pointer ${activeBtn("stage")}`}
+              onClick={handleFilterKeyChange("stage")}
+              data-filter=".stage"
             >
               Stage Lighting
             </li>
@@ -75,186 +162,30 @@ const Portfolio = () => {
         </div>{" "}
         {/* Portfolio Filter */}
         <div className="portfolio-content grid-gutter-lg grid-col-3 lightbox-gallery">
-          <div className="grid-item product branding fashion">
-            <div className="portfolio-box-01">
-              <div className="portfolio-info">
-                <h5 className="white-color font-weight-bold">Momb ios App</h5>
-                <span>Broadcasting ios App</span>
-              </div>
-              <div className="portfolio-img">
-                <img src="static/img/m-portfolio-1.jpg" title="" alt="" />
-                <div className="portfolio-icon">
-                  <a
-                    href="static/img/m-portfolio-1.jpg"
-                    className="gallery-link"
-                  >
-                    <span className="ti-plus" />
-                  </a>
+          {portfolioData.map((item, index) => {
+            return (
+              <a href={item.link} key={index}>
+                <div className={item.className}>
+                  <div className="portfolio-box-01">
+                    <div className="portfolio-info">
+                      <h5 className="white-color font-weight-bold">
+                        {item.title}
+                      </h5>
+                      <span>{item.category}</span>
+                    </div>
+                    <div className="portfolio-img">
+                      <Image
+                        src={item.imgSrc}
+                        layout="responsive"
+                        title={item.imgTitle}
+                        alt={item.imgAlt}
+                      />
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          </div>{" "}
-          {/* grid item */}
-          <div className="grid-item photoshop">
-            <div className="portfolio-box-01">
-              <div className="portfolio-info">
-                <h5 className="white-color font-weight-bold">Momb ios App</h5>
-                <span>Broadcasting ios App</span>
-              </div>
-              <div className="portfolio-img">
-                <img src="static/img/m-portfolio-2.jpg" title="" alt="" />
-                <div className="portfolio-icon">
-                  <a
-                    href="static/img/m-portfolio-2.jpg"
-                    className="gallery-link"
-                  >
-                    <span className="ti-plus" />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>{" "}
-          {/* grid item */}
-          <div className="grid-item product branding">
-            <div className="portfolio-box-01">
-              <div className="portfolio-info">
-                <h5 className="white-color font-weight-bold">Momb ios App</h5>
-                <span>Broadcasting ios App</span>
-              </div>
-              <div className="portfolio-img">
-                <img src="static/img/m-portfolio-3.jpg" title="" alt="" />
-                <div className="portfolio-icon">
-                  <a
-                    href="static/img/m-portfolio-3.jpg"
-                    className="gallery-link"
-                  >
-                    <span className="ti-plus" />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>{" "}
-          {/* grid item */}
-          <div className="grid-item product photoshop">
-            <div className="portfolio-box-01">
-              <div className="portfolio-info">
-                <h5 className="white-color font-weight-bold">Momb ios App</h5>
-                <span>Broadcasting ios App</span>
-              </div>
-              <div className="portfolio-img">
-                <img src="static/img/m-portfolio-5.jpg" title="" alt="" />
-                <div className="portfolio-icon">
-                  <a
-                    href="static/img/m-portfolio-5.jpg"
-                    className="gallery-link"
-                  >
-                    <span className="ti-plus" />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>{" "}
-          {/* grid item */}
-          <div className="grid-item branding">
-            <div className="portfolio-box-01">
-              <div className="portfolio-info">
-                <h5 className="white-color font-weight-bold">Momb ios App</h5>
-                <span>Broadcasting ios App</span>
-              </div>
-              <div className="portfolio-img">
-                <img src="static/img/m-portfolio-4.jpg" title="" alt="" />
-                <div className="portfolio-icon">
-                  <a
-                    href="static/img/m-portfolio-4.jpg"
-                    className="gallery-link"
-                  >
-                    <span className="ti-plus" />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>{" "}
-          {/* grid item */}
-          <div className="grid-item product photoshop">
-            <div className="portfolio-box-01">
-              <div className="portfolio-info">
-                <h5 className="white-color font-weight-bold">Momb ios App</h5>
-                <span>Broadcasting ios App</span>
-              </div>
-              <div className="portfolio-img">
-                <img src="static/img/m-portfolio-6.jpg" title="" alt="" />
-                <div className="portfolio-icon">
-                  <a
-                    href="static/img/m-portfolio-6.jpg"
-                    className="gallery-link"
-                  >
-                    <span className="ti-plus" />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>{" "}
-          {/* grid item */}
-          <div className="grid-item fashion">
-            <div className="portfolio-box-01">
-              <div className="portfolio-info">
-                <h5 className="white-color font-weight-bold">Momb ios App</h5>
-                <span>Broadcasting ios App</span>
-              </div>
-              <div className="portfolio-img">
-                <img src="static/img/m-portfolio-7.jpg" title="" alt="" />
-                <div className="portfolio-icon">
-                  <a
-                    href="static/img/m-portfolio-7.jpg"
-                    className="gallery-link"
-                  >
-                    <span className="ti-plus" />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>{" "}
-          {/* grid item */}
-          <div className="grid-item product branding">
-            <div className="portfolio-box-01">
-              <div className="portfolio-info">
-                <h5 className="white-color font-weight-bold">Momb ios App</h5>
-                <span>Broadcasting ios App</span>
-              </div>
-              <div className="portfolio-img">
-                <img src="static/img/m-portfolio-8.jpg" title="" alt="" />
-                <div className="portfolio-icon">
-                  <a
-                    href="static/img/m-portfolio-8.jpg"
-                    className="gallery-link"
-                  >
-                    <span className="ti-plus" />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>{" "}
-          {/* grid item */}
-          <div className="grid-item fashion">
-            <div className="portfolio-box-01">
-              <div className="portfolio-info">
-                <h5 className="white-color font-weight-bold">Momb ios App</h5>
-                <span>Broadcasting ios App</span>
-              </div>
-              <div className="portfolio-img">
-                <img src="static/img/m-portfolio-9.jpg" title="" alt="" />
-                <div className="portfolio-icon">
-                  <a
-                    href="static/img/m-portfolio-9.jpg"
-                    className="gallery-link"
-                  >
-                    <span className="ti-plus" />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>{" "}
-          {/* grid item */}
+              </a>
+            );
+          })}
         </div>
       </div>
     </section>

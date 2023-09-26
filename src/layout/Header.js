@@ -14,7 +14,7 @@ const Header = ({ blog }) => {
         <div className="d-flex">
           <div className="navbar-brand">
             <Link href="/">
-              <a className="logo-text">Sergio</a>
+              <a className="logo-text">Lucas</a>
             </Link>
           </div>
           <button
@@ -38,12 +38,15 @@ const Header = ({ blog }) => {
           <div className="hl-top">
             <div className="hl-logo">
               <div className="img">
-                <img src="https://media.licdn.com/dms/image/D5603AQG77Law2kJMPw/profile-displayphoto-shrink_200_200/0/1692375857055?e=1700697600&v=beta&t=ZA4ZFowv7Pm9Eje-6AnhowKAXMFvSsRI3bhL8P2QCAs" alt="profile" />
+                <img
+                  src="https://media.licdn.com/dms/image/D5603AQG77Law2kJMPw/profile-displayphoto-shrink_200_200/0/1692375857055?e=1700697600&v=beta&t=ZA4ZFowv7Pm9Eje-6AnhowKAXMFvSsRI3bhL8P2QCAs"
+                  alt="profile"
+                />
               </div>
               <h5>Lucas</h5>
             </div>
           </div>
-          {blog ? <MenuWithBlog /> : <MenuWithOutBlog />}
+          <MenuWithOutBlog />
         </div>
         <div className="nav justify-content-center social-icons">
           {/* <a href="#">
@@ -83,18 +86,18 @@ const MenuWithOutBlog = () => {
           <span>About Me</span>
         </a>
       </li>
+      <li data-menuanchor="work">
+        <a className="nav-link" href="#work">
+          <i className="ti-bookmark-alt" />
+          <span>Portfolio</span>
+        </a>
+      </li>
       <li data-menuanchor="services">
         <a className="nav-link" href="#services">
           <i className="ti-panel" />
           <span>Services</span>
         </a>
       </li>
-      {/* <li data-menuanchor="work">
-        <a className="nav-link" href="#work">
-          <i className="ti-bookmark-alt" />
-          <span>Portfolio</span>
-        </a>
-      </li> */}
       <li data-menuanchor="blog" className="blog">
         <a className="nav-link" href="#blog">
           <i className="ti-layout-media-overlay-alt-2" />
@@ -108,68 +111,5 @@ const MenuWithOutBlog = () => {
         </a>
       </li>
     </ul>
-  );
-};
-
-const MenuWithBlog = () => {
-  useEffect(() => {
-    window.addEventListener("scroll", () =>
-      document.querySelector(".blog").classList.add("active")
-    );
-  });
-
-  return (
-    <Fragment>
-      <ul className="nav nav-menu" id="pp-menu">
-        <li data-menuanchor="home">
-          <Link href="/#home">
-            <a className="nav-link">
-              <i className="ti-home" />
-              <span>Home</span>
-            </a>
-          </Link>
-        </li>
-        <li data-menuanchor="about">
-          <Link href="/#about">
-            <a className="nav-link">
-              <i className="ti-id-badge" />
-              <span>About Me</span>
-            </a>
-          </Link>
-        </li>
-        <li data-menuanchor="services">
-          <Link href="/#services">
-            <a className="nav-link">
-              <i className="ti-panel" />
-              <span>Services</span>
-            </a>
-          </Link>
-        </li>
-        {/* <li data-menuanchor="work">
-          <Link href="/#work">
-            <a className="nav-link">
-              <i className="ti-bookmark-alt" />
-              <span>Portfolio</span>
-            </a>
-          </Link>
-        </li> */}
-        <li data-menuanchor="blog" className="blog active">
-          <Link href="/#blog">
-            <a className="nav-link">
-              <i className="ti-layout-media-overlay-alt-2" />
-              <span>Blogs</span>
-            </a>
-          </Link>
-        </li>
-        <li data-menuanchor="contactus">
-          <Link href="/#contactus">
-            <a className="nav-link">
-              <i className="ti-map-alt" />
-              <span>Contact Me</span>
-            </a>
-          </Link>
-        </li>
-      </ul>
-    </Fragment>
   );
 };

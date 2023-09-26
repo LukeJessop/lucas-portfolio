@@ -24,11 +24,20 @@ const Contact = () => {
     } else {
       emailjs
         .send(
-          "service_seruhwu", // service id
-          "template_21aw58z", // template id
+          "service_wkaro0d", // service id
+          "template_pzx4jwm", // template id
           mailData,
-          "Q3pccdLZhU-mZT7tQ" // public api
+          "EBGjzbImrBfhMJnng" // public api
         )
+      // fetch('https://api.emailjs.com/api/v1.0/email/send', {
+      //   method: 'POST',
+      //   headers: {
+      //     service_id: 'service_wkaro0d',
+      //     template_id: 'template_pzx4jwm',
+      //     user_id: '',
+      //     template_params: mailData,
+      //   }
+      // })
         .then(
           (response) => {
             setError(false);
@@ -54,15 +63,14 @@ const Contact = () => {
     >
       <div className="container">
         <div className="title">
-          <h3>Get in touch.</h3>
+          <h3>Contact Me</h3>
         </div>
         <div className="row">
           <div className="col-lg-5 col-xl-4 m-15px-tb">
-            <div className="contact-info">
-              <h4>What’s your story? Get in touch</h4>
+            <div className="contact-info" style={{height: '100%'}}>
+              <h4>Lets Create Something Amazing!</h4>
               <p>
-                Always available for freelancing if the right project comes
-                along, Feel free to contact me.
+                Always available for freelancing. Please feel free to contact me.
               </p>
               <ul>
                 <li className="media">

@@ -3,12 +3,12 @@ import About from "../src/components/About";
 import Blog from "../src/components/Blog";
 import Contact from "../src/components/Contact";
 import Services from "../src/components/Services";
-import TypingAnimation from "../src/components/TypingAnimation";
 import Layout from "../src/layout/Layout";
+import TypingAnimation from "../src/components/TypingAnimation";
 const Portfolio = dynamic(() => import("../src/components/Portfolio"), {
   ssr: false,
 });
-const Index = () => {
+const IndexVideo = () => {
   return (
     <Layout>
       <section
@@ -16,7 +16,15 @@ const Index = () => {
         data-nav-tooltip="Home"
         className="pp-section pp-scrollable"
       >
-        <div className="home-banner">
+        <div className="home-banner ">
+          {/* <div
+            className="video-bg"
+            data-property="{videoURL:'https://www.youtube.com/embed/V_ESIzSmoCc',containment:'#home', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:.2, quality:'default'}"
+          /> */}
+          {/* <div className="video-bg">
+            <iframe src="https://www.youtube.com/embed/9QV4kVLnVXk?autoplay=1&mute=1&controls=0" title="Monkidex Website Demo" frameborder="0"></iframe>
+          </div> */}
+
           <div className="container">
             <div className="row full-screen align-items-center">
               <div className="col-lg-6">
@@ -27,9 +35,16 @@ const Index = () => {
                     I Am A <TypingAnimation />
                   </p>
                   <p className="desc">
-                    I develop web sites for customers of all sizes,
-                    specializing in creating stylish, modern websites, web
-                    services and online stores.
+                    {`I'm`} a Full-Stack Developer from Draper, Utah with over 3
+                    years of experience. After I graduated at Alta High School,
+                    I attented Devmountain. Which taught me full stack web
+                    development. I now code and create amazing web elements for
+                    amazing people around the world. Using Adobe Premiere Pro
+                    For the past 6 years, I would create{" "}
+                    <a href="https://www.youtube.com/channel/UChaN9QPqE1a5tqPCfbN3zGw">
+                      youtube
+                    </a>{" "}
+                    videos in my free time.
                   </p>
                   <div className="btn-bar">
                     <a className="px-btn px-btn-theme" href="#contactus">
@@ -40,7 +55,12 @@ const Index = () => {
               </div>
               <div className="col-lg-6">
                 <div className="hb-img">
-                  <img src="static/img/home-banner.png" title="" alt="" style={{borderRadius: '50%'}} />
+                  <img
+                    src="static/img/home-banner.png"
+                    title=""
+                    alt=""
+                    style={{ borderRadius: "50%" }}
+                  />
                 </div>
               </div>
             </div>
@@ -51,12 +71,12 @@ const Index = () => {
       {/* about us */}
       <About />
       {/* End about us */}
+      {/* Portfolio */}
+      <Portfolio />
+      {/* End Portfolio */}
       {/* Services */}
       <Services />
       {/* End Services */}
-      {/* Portfolio */}
-      {/* <Portfolio /> */}
-      {/* End Portfolio */}
       {/* Blog */}
       <Blog />
       {/* End Blog */}
@@ -65,4 +85,4 @@ const Index = () => {
     </Layout>
   );
 };
-export default Index;
+export default IndexVideo;
