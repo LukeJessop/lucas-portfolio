@@ -28,7 +28,7 @@ const Testimonials = () => {
   };
   return (
     <Fragment>
-      <div className="title">
+      {/* <div className="title">
         <h3>Testimonials.</h3>
       </div>
       <Swiper {...props}>
@@ -89,7 +89,7 @@ const Testimonials = () => {
           </div>
         </SwiperSlide>
       </Swiper>
-      <div className="owl-dots"></div>
+      <div className="owl-dots"></div> */}
     </Fragment>
   );
 };

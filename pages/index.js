@@ -5,6 +5,7 @@ import Contact from "../src/components/Contact";
 import Services from "../src/components/Services";
 import Layout from "../src/layout/Layout";
 import TypingAnimation from "../src/components/TypingAnimation";
+import Image from "next/image";
 const Portfolio = dynamic(() => import("../src/components/Portfolio"), {
   ssr: false,
 });
@@ -55,8 +56,11 @@ const IndexVideo = () => {
               </div>
               <div className="col-lg-6">
                 <div className="hb-img">
-                  <img
-                    src="static/img/home-banner.png"
+                  <Image
+                    layout="responsive"
+                    height={100}
+                    width={100}
+                    src="/static/img/home-banner.png"
                     title=""
                     alt=""
                     style={{ borderRadius: "50%" }}

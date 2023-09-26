@@ -1,13 +1,15 @@
 import Link from "next/link";
 import { Fragment, useEffect, useState } from "react";
 import { activeSection } from "../utilits";
+import Image from "next/image";
+import pfp from '../components/assets/pfp.jpeg'
 const Header = ({ blog }) => {
   const [sideBarToggle, setSideBarToggle] = useState(false);
   useEffect(() => {
     if (!blog) {
       activeSection();
     }
-  }, []);
+  }, [blog]);
   return (
     <Fragment>
       <div className="mob-header">
@@ -38,8 +40,11 @@ const Header = ({ blog }) => {
           <div className="hl-top">
             <div className="hl-logo">
               <div className="img">
-                <img
-                  src="https://media.licdn.com/dms/image/D5603AQG77Law2kJMPw/profile-displayphoto-shrink_200_200/0/1692375857055?e=1700697600&v=beta&t=ZA4ZFowv7Pm9Eje-6AnhowKAXMFvSsRI3bhL8P2QCAs"
+                <Image
+                  layout="responsive"
+                  width={100}
+                  height={100}
+                  src={pfp}
                   alt="profile"
                 />
               </div>
@@ -98,12 +103,12 @@ const MenuWithOutBlog = () => {
           <span>Services</span>
         </a>
       </li>
-      <li data-menuanchor="blog" className="blog">
+      {/* <li data-menuanchor="blog" className="blog">
         <a className="nav-link" href="#blog">
           <i className="ti-layout-media-overlay-alt-2" />
           <span>Blogs</span>
         </a>
-      </li>
+      </li> */}
       <li data-menuanchor="contactus">
         <a className="nav-link" href="#contactus">
           <i className="ti-map-alt" />
