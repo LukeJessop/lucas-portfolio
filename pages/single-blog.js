@@ -1,5 +1,5 @@
 // import Layout from "../src/layout/Layout";
-// const SingleBlog = () => {
+const SingleBlog = () => {
 //   return (
 //     <Layout blog>
 //       <div className="single-blog">
@@ -135,5 +135,5 @@
 //       </div>
 //     </Layout>
 //   );
-// };
-// export default SingleBlog;
+};
+export default SingleBlog;

@@ -8,7 +8,7 @@
 // const Portfolio = dynamic(() => import("../src/components/Portfolio"), {
 //   ssr: false,
 // });
-// const IndexGlitch = () => {
+const IndexGlitch = () => {
 //   return (
 //     <Layout>
 //       {" "}
@@ -75,5 +75,5 @@
 //       <Contact />
 //     </Layout>
 //   );
-// };
-// export default IndexGlitch;
+};
+export default IndexGlitch;

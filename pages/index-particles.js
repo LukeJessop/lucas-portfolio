@@ -8,7 +8,7 @@
 // const Portfolio = dynamic(() => import("../src/components/Portfolio"), {
 //   ssr: false,
 // });
-// const IndexParticles = () => {
+const IndexParticles = () => {
 //   return (
 //     <Layout>
 //       <section
@@ -66,5 +66,5 @@
 //       <Contact />
 //     </Layout>
 //   );
-// };
-// export default IndexParticles;
+};
+export default IndexParticles;

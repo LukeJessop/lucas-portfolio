@@ -8,7 +8,7 @@
 // const Portfolio = dynamic(() => import("../src/components/Portfolio"), {
 //   ssr: false,
 // });
-// const Index = () => {
+const Index = () => {
 //   return (
 //     <Layout>
 //       <section
@@ -64,5 +64,5 @@
 //       <Contact />
 //     </Layout>
 //   );
-// };
-// export default Index;
+};
+export default Index;

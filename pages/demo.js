@@ -2,7 +2,7 @@
 // import Link from "next/link";
 // import { Fragment } from "react";
 
-// const Demo = () => {
+const Demo = () => {
 //   return (
 //     <Fragment>
 //       <Head>
@@ -155,5 +155,5 @@
 //       </main>
 //     </Fragment>
 //   );
-// };
-// export default Demo;
+};
+export default Demo;
