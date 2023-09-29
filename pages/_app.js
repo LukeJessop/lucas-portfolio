@@ -1,8 +1,8 @@
 import Head from "next/head";
 import { Fragment, useEffect, useState } from "react";
 import PreLoader from "../src/layout/PreLoader";
-import "../styles/glitch.css";
 import "../styles/globals.css";
+import "../styles/glitch.css";
 import '../public/static/plugin/bootstrap/css/bootstrap.css';
 import '../public/static/plugin/font-awesome/css/all.css';
 import '../public/static/plugin/et-line/style.css';
