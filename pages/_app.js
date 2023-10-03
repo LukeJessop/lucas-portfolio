@@ -27,7 +27,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <Fragment>
       <Head>
-        <title>Lucas {`Jessop's`} Portfolio</title>
+        <title>{`Lucas Jessop's Portfolio`}</title>
         {/* <!-- Favicon --> */}
 
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
@@ -60,14 +60,7 @@ function MyApp({ Component, pageProps }) {
         {/* <!-- theme css --> */}
         {/* <link href="static/css/style.css" rel="stylesheet" /> */}
 
-        {/* <link
-          href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-          rel="stylesheet"
-        /> */}
+        
       </Head>
       {load && <PreLoader />}
       <Component {...pageProps} />
