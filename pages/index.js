@@ -14,7 +14,7 @@ const IndexVideo = () => {
     <Layout>
       <section
         id="home"
-        data-nav-tooltip="Home"
+        data-nav-tooltip="home"
         className="pp-section pp-scrollable"
       >
         <div className="home-banner ">
