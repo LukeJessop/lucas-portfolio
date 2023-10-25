@@ -34,18 +34,7 @@ const EducationAndSkills = () => {
           <h3>Education &amp; Skills</h3>
         </div>
         <div className="row">
-          <div className="col-lg-4 m-15px-tb">
-            <ul className="aducation-box">
-              {data.educationData.map((item, index) => (
-                <li key={index}>
-                  <span>{item.date}</span>
-                  <h6>{item.title}</h6>
-                  <p>{item.company}</p>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="col-lg-7 ml-auto m-15px-tb">
+          <div className="col-lg-7 m-15px-tb">
             <div className="skills-box">
               <h3>My skills</h3>
               <p>
@@ -70,6 +59,17 @@ const EducationAndSkills = () => {
                 </div>
               ))}
             </div>
+          </div>
+          <div className="col-lg-4 m-15px-tb">
+            <ul className="aducation-box">
+              {data.educationData.map((item, index) => (
+                <li key={index}>
+                  <span>{item.date}</span>
+                  <h6>{item.title}</h6>
+                  <p>{item.company}</p>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>

@@ -1,14 +1,14 @@
 import Image from "next/image";
 import barbieImg from "./assets/barbie-box.png";
-import pfp from "./assets/pfp.png"
+import pfp from "./assets/pfp.png";
 import EducationAndSkills from "./Education&Skills";
 import Experience from "./Experience";
 
 const imgStyle = {
-  borderRadius: '50%',
-  maxWidth: '500px',
-  aspectRatio: '1 / 1'
-}
+  // maxWidth: '500px',
+  width: "50%",
+  aspectRatio: "1 / 1"
+};
 
 const About = () => {
   return (
@@ -19,18 +19,9 @@ const About = () => {
         className="pp-section pp-scrollable section counter"
       >
         <div className="container">
-          <div className="row align-items-center justify-content-center">
+          <div className="row justify-content-\">
             <div className="col-lg-6 m-15px-tb">
-              <div className="about-me">
-                <div className="img">
-                  <div className="img-in">
-                    <Image style={imgStyle} layout="intrinsic" src={pfp} title="" alt="" />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-6 m-15px-tb">
-              <div className="about-info">
+              <div className="about-info" style={{padding: '0px'}}>
                 <div className="title">
                   <h3>Need a Developer?</h3>
                 </div>
@@ -86,53 +77,43 @@ const About = () => {
                   <div className="btn-bar" style={{ display: "flex" }}>
                     <a
                       className="px-btn px-btn-theme"
-                      href="#work"
+                      href="#contactus"
                       style={{ minWidth: "0" }}
                     >
-                      <span>Portfolio</span>
+                      <span>Contact</span>
                     </a>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div className="container">
-          <div className="row align-items-center justify-content-center">
             <div className="col-lg-6 m-15px-tb">
-              <div className="about-info">
+              <div className="about-info" style={{padding: '0px'}}>
                 <div className="title">
                   <h3>Need a Video Editor?</h3>
                 </div>
                 <div className="about-text">
                   <p>
-                    I am very fluent in{" "}
+                    I am highly proficient in{" "}
                     <a
                       target="_blank"
                       rel="noreferrer"
                       href="https://www.adobe.com/products/premiere.html"
                     >
-                      Premiere Pro
+                      Adobe Premiere Pro
                     </a>
-                    . I have made tons of videos for my less professional
-                    youtube passion project{" "}
-                    <a
-                      target="_blank"
-                      rel="noreferrer"
-                      href="https://www.youtube.com/channel/UCqoiukq0P2ggbULZqJSyJaQ"
-                    >
-                      Gekko36
-                    </a>
-                    . And now, I make videos for my more professional current{" "}
+                    , a skill that {"I've"} honed while creating content for my{" "}
                     <a
                       target="_blank"
                       rel="noreferrer"
                       href="https://www.youtube.com/channel/UChaN9QPqE1a5tqPCfbN3zGw"
                     >
-                      YouTube Channel
+                      current YouTube channel
                     </a>
-                    . I love producing my own and {`others'`} artistic visions
-                    through videos.
+                    . I have a deep passion for bringing artistic visions to
+                    life through the medium of video production, and I find
+                    immense satisfaction in both producing my own creative
+                    content and collaborating with others to turn their ideas
+                    into visually captivating experiences.
                   </p>
                   <div className="btn-bar" style={{ display: "flex" }}>
                     <a
@@ -146,21 +127,9 @@ const About = () => {
                 </div>
               </div>
             </div>
-            <div className="col-lg-6 m-15px-tb">
-              <div className="about-me">
-                <div className="img">
-                  <div className="img-in">
-                    <Image style={imgStyle} layout="intrinsic" src={barbieImg} title="" alt="" />
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
 
-        <EducationAndSkills />
-
-        <Experience />
       </section>
     </>
   );

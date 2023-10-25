@@ -14,6 +14,7 @@ const portfolioData = [
     imgSrc: exploroImg,
     imgTitle: "exploro",
     imgAlt: "exploro",
+    isVideo: false,
     link: "https://exploro.com"
   },
   {
@@ -24,6 +25,7 @@ const portfolioData = [
     imgSrc: pokemonFighters,
     imgTitle: "pokemonfighters",
     imgAlt: "pokemon-fighters",
+    isVideo: false,
     link: "https://pokemonfighters.com" //look into possibly iframing these so they dont leave portfolio!
   }
 ];
@@ -58,12 +60,11 @@ const Portfolio = () => {
   }, [filterKey]);
 
   const fetchYoutubeData = async () => {
-    const apiKey = "AIzaSyDT1-mNDftguEgKRGbeeLlfkbxZgM9RuF0";
-
-    const channelId = "UChaN9QPqE1a5tqPCfbN3zGw";
+    // const apiKey = ;
+    // const channelId = ;
 
     const response = await fetch(
-      `https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelId}&part=snippet,id&order=date&maxResults=10`,
+      `https://www.googleapis.com/youtube/v3/search?key=${process.env.NEXT_PUBLIC_API_KEY}&channelId=${process.env.NEXT_PUBLIC_CHANNEL_ID}&part=snippet,id&order=date&maxResults=10`,
       { method: "GET" }
     );
     const data = response.json();
@@ -74,13 +75,14 @@ const Portfolio = () => {
         .map((item) => {
           console.log(item);
           return {
-            className: "grid-item product video-editing",
+            className: "grid-item product video",
             videoLink: `https://www.youtube.com/watch?v=${item.id.videoId}`,
             title: item.snippet.title,
-            category: item.snippet.description,
+            category: "Youtube Video",
             imgSrc: item.snippet.thumbnails.high.url,
             imgTitle: "youtubeVideo",
             imgAlt: "youtube-video",
+            isVideo: true,
             link: `https://www.youtube.com/watch?v=${item.id.videoId}` //look into possibly iframing these so they dont leave portfolio!
           };
         });
@@ -124,9 +126,9 @@ const Portfolio = () => {
               Websites
             </li>
             <li
-              className={`c-pointer ${activeBtn("video-editing")}`}
-              onClick={handleFilterKeyChange("video-editing")}
-              data-filter=".video-editing"
+              className={`c-pointer ${activeBtn("video")}`}
+              onClick={handleFilterKeyChange("video")}
+              data-filter=".video"
             >
               Videos
             </li>
@@ -153,14 +155,24 @@ const Portfolio = () => {
                       <span>{item?.category}</span>
                     </div>
                     <div className="portfolio-img">
-                      <Image
-                        src={item?.imgSrc}
-                        width={100}
-                        height={100}
-                        layout="responsive"
-                        title={item?.imgTitle}
-                        alt={item?.imgAlt}
-                      />
+                      {item?.isVideo ? (
+                        <div
+                          style={{
+                            width: "100%",
+                            aspectRatio: "16/9",
+                            backgroundPosition: "center",
+                            backgroundImage: `url(${item?.imgSrc})`
+                          }}
+                        ></div>
+                      ) : (
+                        <Image
+                          src={item?.imgSrc}
+                          objectFit="contain"
+                          layout="intrinsic"
+                          title={item?.imgTitle}
+                          alt={item?.imgAlt}
+                        />
+                      )}
                     </div>
                   </div>
                 </div>

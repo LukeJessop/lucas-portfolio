@@ -6,6 +6,8 @@ import Services from "../src/components/Services";
 import Layout from "../src/layout/Layout";
 import TypingAnimation from "../src/components/TypingAnimation";
 import Image from "next/image";
+import Experience from "../src/components/Experience";
+import EducationAndSkills from "../src/components/Education&Skills";
 const Portfolio = dynamic(() => import("../src/components/Portfolio"), {
   ssr: false,
 });
@@ -74,6 +76,12 @@ const IndexVideo = () => {
       {/* End Home */}
       {/* about us */}
       <About />
+
+      <Contact />
+
+      <EducationAndSkills />
+
+      <Experience />
       {/* End about us */}
       {/* Portfolio */}
       <Portfolio />
@@ -85,7 +93,6 @@ const IndexVideo = () => {
       <Blog />
       {/* End Blog */}
       {/* Contact us */}
-      <Contact />
     </Layout>
   );
 };

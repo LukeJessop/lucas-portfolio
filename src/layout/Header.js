@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Fragment, useEffect, useState } from "react";
 import { activeSection } from "../utilits";
 import Image from "next/image";
-import pfp from '../components/assets/pfp.jpeg'
+import pfp from "../components/assets/pfp.jpeg";
 const Header = ({ blog }) => {
   const [sideBarToggle, setSideBarToggle] = useState(false);
   useEffect(() => {
@@ -16,7 +16,7 @@ const Header = ({ blog }) => {
         <div className="d-flex">
           <div className="navbar-brand">
             <Link href="/">
-              <a className="logo-text">Lucas</a>
+              <a className="logo-text">Lucas Jessop</a>
             </Link>
           </div>
           <button
@@ -35,6 +35,7 @@ const Header = ({ blog }) => {
         className={`header-left ${
           sideBarToggle ? "menu-open menu-open-desk" : ""
         }`}
+        style={{ overflow: "hidden" }}
       >
         <div className="scroll-bar">
           <div className="hl-top">
@@ -51,7 +52,7 @@ const Header = ({ blog }) => {
               <h5>Lucas</h5>
             </div>
           </div>
-          <MenuWithOutBlog />
+          <MenuWithOutBlog setSideBarToggle={setSideBarToggle} />
         </div>
         <div className="nav justify-content-center social-icons">
           {/* <a href="#">
@@ -76,57 +77,64 @@ const Header = ({ blog }) => {
 };
 export default Header;
 
-const MenuWithOutBlog = () => {
+const MenuWithOutBlog = ({ setSideBarToggle }) => {
   return (
     <ul className="nav nav-menu" id="pp-menu">
-      <li data-menuanchor="home" className="active">
+      <li
+        onClick={() => setSideBarToggle(false)}
+        data-menuanchor="home"
+        className="active"
+      >
         <a className="nav-link" href="#home">
           <i className="ti-home" />
           <span>Home</span>
         </a>
       </li>
-      <li data-menuanchor="about">
+      <li onClick={() => setSideBarToggle(false)} data-menuanchor="about">
         <a className="nav-link" href="#about">
           <i className="ti-id-badge" />
           <span>About Me</span>
         </a>
       </li>
-      <li data-menuanchor="EducationAndSkills">
-        <a className="nav-link" href="#EducationAndSkills">
-          <i className="ti-id-badge" />
-          <span>Education</span>
-        </a>
-      </li>
-      <li data-menuanchor="Experience">
-        <a className="nav-link" href="#Experience">
-          <i className="ti-id-badge" />
-          <span>Experience</span>
-        </a>
-      </li>
-      <li data-menuanchor="work">
-        <a className="nav-link" href="#work">
-          <i className="ti-bookmark-alt" />
-          <span>Portfolio</span>
-        </a>
-      </li>
-      <li data-menuanchor="services">
-        <a className="nav-link" href="#services">
-          <i className="ti-panel" />
-          <span>Services</span>
-        </a>
-      </li>
-      {/* <li data-menuanchor="blog" className="blog">
-        <a className="nav-link" href="#blog">
-          <i className="ti-layout-media-overlay-alt-2" />
-          <span>Blogs</span>
-        </a>
-      </li> */}
-      <li data-menuanchor="contactus">
+      <li onClick={() => setSideBarToggle(false)} data-menuanchor="contactus">
         <a className="nav-link" href="#contactus">
           <i className="ti-map-alt" />
           <span>Contact Me</span>
         </a>
       </li>
+      <li
+        onClick={() => setSideBarToggle(false)}
+        data-menuanchor="EducationAndSkills"
+      >
+        <a className="nav-link" href="#EducationAndSkills">
+          <i className="ti-id-badge" />
+          <span>Education</span>
+        </a>
+      </li>
+      <li onClick={() => setSideBarToggle(false)} data-menuanchor="Experience">
+        <a className="nav-link" href="#Experience">
+          <i className="ti-id-badge" />
+          <span>Experience</span>
+        </a>
+      </li>
+      <li onClick={() => setSideBarToggle(false)} data-menuanchor="work">
+        <a className="nav-link" href="#work">
+          <i className="ti-bookmark-alt" />
+          <span>Portfolio</span>
+        </a>
+      </li>
+      <li onClick={() => setSideBarToggle(false)} data-menuanchor="services">
+        <a className="nav-link" href="#services">
+          <i className="ti-panel" />
+          <span>Services</span>
+        </a>
+      </li>
+      {/* <li onClick={() => setSideBarToggle(false)} data-menuanchor="blog" className="blog">
+        <a className="nav-link" href="#blog">
+          <i className="ti-layout-media-overlay-alt-2" />
+          <span>Blogs</span>
+        </a>
+      </li> */}
     </ul>
   );
 };
