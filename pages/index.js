@@ -8,6 +8,7 @@ import TypingAnimation from "../src/components/TypingAnimation";
 import Image from "next/image";
 import Experience from "../src/components/Experience";
 import EducationAndSkills from "../src/components/Education&Skills";
+import Videos from "../src/components/Videos";
 const Portfolio = dynamic(() => import("../src/components/Portfolio"), {
   ssr: false,
 });
@@ -85,6 +86,7 @@ const IndexVideo = () => {
       {/* End about us */}
       {/* Portfolio */}
       <Portfolio />
+      <Videos/>
       {/* End Portfolio */}
       {/* Services */}
       <Services />

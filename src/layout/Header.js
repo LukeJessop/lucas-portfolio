@@ -55,16 +55,16 @@ const Header = ({ blog }) => {
           <MenuWithOutBlog setSideBarToggle={setSideBarToggle} />
         </div>
         <div className="nav justify-content-center social-icons">
-          {/* <a href="#">
-            <i className="fab fa-facebook-f" />
-          </a> */}
-          {/* <a href="#">
-            <i className="fab fa-twitter" />
-          </a> */}
-          <a href="https://www.instagram.com/luke_jessop_jr/">
+          <a target="_blank" rel="noreferrer" href="https://www.youtube.com/channel/UChaN9QPqE1a5tqPCfbN3zGw">
+            <i className="fab fa-youtube" />
+          </a>
+          <a target="_blank" rel="noreferrer" href="https://github.com/LukeJessop">
+            <i className="fab fa-github" />
+          </a>
+          <a target="_blank" rel="noreferrer" href="https://www.instagram.com/luke_jessop_jr/">
             <i className="fab fa-instagram" />
           </a>
-          <a href="https://www.linkedin.com/in/lucas-jessop-7861ab187/">
+          <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/lucas-jessop-7861ab187/">
             <i className="fab fa-linkedin-in" />
           </a>
           {/* <a href="#">
@@ -121,6 +121,12 @@ const MenuWithOutBlog = ({ setSideBarToggle }) => {
         <a className="nav-link" href="#work">
           <i className="ti-bookmark-alt" />
           <span>Portfolio</span>
+        </a>
+      </li>
+      <li onClick={() => setSideBarToggle(false)} data-menuanchor="videos">
+        <a className="nav-link" href="#videos">
+          <i className="ti-bookmark-alt" />
+          <span>My Videos</span>
         </a>
       </li>
       <li onClick={() => setSideBarToggle(false)} data-menuanchor="services">

@@ -34,7 +34,6 @@ const Portfolio = () => {
   // Isotope
   const isotope = useRef();
   const [filterKey, setFilterKey] = useState("*");
-  const [youtubeVideos, setYoutubeVideos] = useState([]);
   useEffect(() => {
     isotope.current = new Isotope(".portfolio-content", {
       itemSelector: ".grid-item",
@@ -59,41 +58,6 @@ const Portfolio = () => {
     }
   }, [filterKey]);
 
-  const fetchYoutubeData = async () => {
-    // const apiKey = ;
-    // const channelId = ;
-
-    const response = await fetch(
-      `https://www.googleapis.com/youtube/v3/search?key=${process.env.NEXT_PUBLIC_API_KEY}&channelId=${process.env.NEXT_PUBLIC_CHANNEL_ID}&part=snippet,id&order=date&maxResults=10`,
-      { method: "GET" }
-    );
-    const data = response.json();
-    data.then((res) => {
-      setYoutubeVideos([...res.items]);
-      const formattedVideos = res.items
-        .filter((item) => item.snippet.title !== "Lucas Jessop")
-        .map((item) => {
-          console.log(item);
-          return {
-            className: "grid-item product video",
-            videoLink: `https://www.youtube.com/watch?v=${item.id.videoId}`,
-            title: item.snippet.title,
-            category: "Youtube Video",
-            imgSrc: item.snippet.thumbnails.high.url,
-            imgTitle: "youtubeVideo",
-            imgAlt: "youtube-video",
-            isVideo: true,
-            link: `https://www.youtube.com/watch?v=${item.id.videoId}` //look into possibly iframing these so they dont leave portfolio!
-          };
-        });
-      portfolioData = [...portfolioData, ...formattedVideos];
-    });
-  };
-
-  useEffect(() => {
-    // Make a request to fetch channel videos
-    fetchYoutubeData();
-  }, []);
 
   const handleFilterKeyChange = (key) => () => {
     setFilterKey(key);
@@ -116,9 +80,9 @@ const Portfolio = () => {
               onClick={handleFilterKeyChange("*")}
               data-filter="*"
             >
-              All
+              Websites
             </li>
-            <li
+            {/* <li
               className={`c-pointer ${activeBtn("website")}`}
               onClick={handleFilterKeyChange("website")}
               data-filter=".website"
@@ -126,19 +90,12 @@ const Portfolio = () => {
               Websites
             </li>
             <li
-              className={`c-pointer ${activeBtn("video")}`}
-              onClick={handleFilterKeyChange("video")}
-              data-filter=".video"
-            >
-              Videos
-            </li>
-            <li
               className={`c-pointer ${activeBtn("stage")}`}
               onClick={handleFilterKeyChange("stage")}
               data-filter=".stage"
             >
               Stage Lighting
-            </li>
+            </li> */}
           </ul>
         </div>{" "}
         {/* Portfolio Filter */}
@@ -155,24 +112,13 @@ const Portfolio = () => {
                       <span>{item?.category}</span>
                     </div>
                     <div className="portfolio-img">
-                      {item?.isVideo ? (
-                        <div
-                          style={{
-                            width: "100%",
-                            aspectRatio: "16/9",
-                            backgroundPosition: "center",
-                            backgroundImage: `url(${item?.imgSrc})`
-                          }}
-                        ></div>
-                      ) : (
-                        <Image
-                          src={item?.imgSrc}
-                          objectFit="contain"
-                          layout="intrinsic"
-                          title={item?.imgTitle}
-                          alt={item?.imgAlt}
-                        />
-                      )}
+                      <Image
+                        src={item?.imgSrc}
+                        objectFit="contain"
+                        layout="intrinsic"
+                        title={item?.imgTitle}
+                        alt={item?.imgAlt}
+                      />
                     </div>
                   </div>
                 </div>
