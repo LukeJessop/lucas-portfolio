@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import exploroImg from "./assets/exploro.jpeg";
 import pokemonFighters from "./assets/pokemonFighters.png";
-import axios from "axios";
+import mixologyMasterImg from './assets/mixologymaster.jpg'
 
 const portfolioData = [
   {
@@ -26,8 +26,19 @@ const portfolioData = [
     imgTitle: "pokemonfighters",
     imgAlt: "pokemon-fighters",
     isVideo: false,
-    link: "https://pokemonfighters.com" //look into possibly iframing these so they dont leave portfolio!
-  }
+    link: "https://pokemonfighters.com" 
+  },
+  {
+    className: "grid-item product website",
+    videoLink: "",
+    title: "Mixology Master",
+    category: "API Practice Website",
+    imgSrc: mixologyMasterImg,
+    imgTitle: "MixologyMaster",
+    imgAlt: "mixology-master",
+    isVideo: false,
+    link: "https://mixologymaster.netlify.app/" //look into possibly iframing these so they dont leave portfolio!
+  },
 ];
 
 const Portfolio = () => {
