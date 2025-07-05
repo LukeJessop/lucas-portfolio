@@ -7,7 +7,7 @@ import Experience from "./Experience";
 const imgStyle = {
   // maxWidth: '500px',
   width: "50%",
-  aspectRatio: "1 / 1"
+  aspectRatio: "1 / 1",
 };
 
 const About = () => {
@@ -21,7 +21,7 @@ const About = () => {
         <div className="container">
           <div className="row justify-content-\">
             <div className="col-lg-6 m-15px-tb">
-              <div className="about-info" style={{padding: '0px'}}>
+              <div className="about-info" style={{ padding: "0px" }}>
                 <div className="title">
                   <h3>Need a Developer?</h3>
                 </div>
@@ -87,7 +87,7 @@ const About = () => {
               </div>
             </div>
             <div className="col-lg-6 m-15px-tb">
-              <div className="about-info" style={{padding: '0px'}}>
+              <div className="about-info" style={{ padding: "0px" }}>
                 <div className="title">
                   <h3>Need a Video Editor?</h3>
                 </div>
@@ -101,13 +101,22 @@ const About = () => {
                     >
                       Adobe Premiere Pro
                     </a>
-                    , a skill that {"I've"} honed while creating content for my{" "}
+                    , a skill that {"I've"} honed while creating content for
+                    both my{" "}
                     <a
                       target="_blank"
                       rel="noreferrer"
                       href="https://www.youtube.com/channel/UChaN9QPqE1a5tqPCfbN3zGw"
                     >
-                      current YouTube channel
+                      developer channel
+                    </a>{" "}
+                    and{" "}
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://www.youtube.com/@GeKKo365/videos"
+                    >
+                      gaming channel
                     </a>
                     . I have a deep passion for bringing artistic visions to
                     life through the medium of video production, and I find
@@ -129,7 +138,6 @@ const About = () => {
             </div>
           </div>
         </div>
-
       </section>
     </>
   );

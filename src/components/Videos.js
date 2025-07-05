@@ -3,6 +3,12 @@ import React, { useCallback, useEffect, useState } from "react";
 
 const videoArray = [
   {
+    title: "Adventure Game In Unity Final Product",
+    thumbnail:
+      "https://i.ytimg.com/vi/1OC9yr-75vw/hqdefault.jpg?sqp=-oaymwE2CNACELwBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARhlIFAoXTAP&rs=AOn4CLCE7PfwD4eG3KQxQgb6MSsH1D19ow",
+    link: "https://www.youtube.com/watch?v=1OC9yr-75vw"
+  },
+  {
     title: "Pokidex Website Creation Timelapse",
     thumbnail:
       "https://i.ytimg.com/vi/NLFycSrc1W8/hqdefault.jpg?sqp=-oaymwE2CNACELwBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARh_ICAoJDAP&rs=AOn4CLBIPIb5zSxFf16vs3Hzl6EpQ3LeAg",

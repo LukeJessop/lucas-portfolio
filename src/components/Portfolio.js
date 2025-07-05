@@ -15,7 +15,7 @@ const portfolioData = [
     imgTitle: "exploro",
     imgAlt: "exploro",
     isVideo: false,
-    link: "https://exploro.com"
+    link: "https://explorogroup.com/"
   },
   {
     className: "grid-item product website",
@@ -26,7 +26,7 @@ const portfolioData = [
     imgTitle: "pokemonfighters",
     imgAlt: "pokemon-fighters",
     isVideo: false,
-    link: "https://pokemonfighters.com" 
+    link: "https://pokemonfighters.netlify.app" 
   },
   {
     className: "grid-item product website",

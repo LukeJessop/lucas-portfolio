@@ -3,22 +3,15 @@ import { Fragment } from "react";
 const data = {
   educationData: [
     {
-      date: "Nov, 2020 - Jan, 2021",
+      date: "2020-2021",
       title: "Student Developer",
       company: "Devmountain"
     },
     {
-      date: "2017-2023",
-      title: "Video Editor",
-      company: "Self Propelled Learning"
-    }
-  ],
-  skillsData: [
-    { skill: "React", width: "92%" },
-    { skill: "JavaScript", width: "90%" },
-    { skill: "CSS", width: "86%" },
-    { skill: "Node.js", width: "75%" },
-    { skill: "Premiere Pro", width: "89%" }
+      date: "2024-PRESENT",
+      title: "Animation & Game Development",
+      company: "Utah Valley University"
+    },
   ]
 };
 
@@ -38,26 +31,13 @@ const EducationAndSkills = () => {
             <div className="skills-box">
               <h3>My skills</h3>
               <p>
-                {`I'm`} a web developer with a passion for crafting dynamic and
-                engaging digital experiences. I have a deep knowledge of React,
+                {`I'm`} a web developer with a deep knowledge of React,
                 Node.js, CSS, JavaScript, and HTML, which enables me to create
-                functional and visually appealing websites. Additionally, I
-                enjoy venturing into the world of video editing using Premiere
-                Pro, allowing me to combine my technical expertise with my
-                creative instincts. This dual skill set empowers me to bring
-                ideas to life in both the web development and multimedia realms,
-                making me a versatile and dynamic professional.
+                functional and visually appealing websites. I have recently started my bachelors in Animation & Game development at
+                Utah Valley University. 
+                Both my experience as a Web Developer and as a student in college has really helped
+                me learn a lot about programming.  
               </p>
-              {data.skillsData.map((item, index) => (
-                <div className="skill-lt" key={index}>
-                  <h6>{item.skill}</h6>
-                  <div className="skill-bar">
-                    <div className="skill-bar-in" style={{ width: item.width }}>
-                      <span data-toggle="tooltip" title={item.width} />
-                    </div>
-                  </div>
-                </div>
-              ))}
             </div>
           </div>
           <div className="col-lg-4 m-15px-tb">

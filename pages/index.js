@@ -36,19 +36,15 @@ const IndexVideo = () => {
                   <h6>Hello, my name is</h6>
                   <h1 className="font-alt">Lucas Jessop</h1>
                   <p className="lead">
-                    I Am A <TypingAnimation />
+                    <TypingAnimation />
                   </p>
                   <p className="desc">
-                    {`I'm`} a Full-Stack Developer from Draper, Utah with over 3
-                    years of experience. After I graduated at Alta High School,
-                    I attented Devmountain. Which taught me full stack web
-                    development. I now code and create amazing web elements for
-                    amazing people around the world. Using Adobe Premiere Pro
-                    For the past 6 years, I would create{" "}
-                    <a href="https://www.youtube.com/channel/UChaN9QPqE1a5tqPCfbN3zGw">
-                      youtube
-                    </a>{" "}
-                    videos in my free time.
+                    {`I'm`} a Full-stack developer with experience in front-end
+                    and back-end development, cloud infrastructure, and quality
+                    assurance. Skilled in Javascript libraries like React, and
+                    NodeJS. As well as experience using PostgreSQL, and services
+                    inside of AWS. Passionate about clean code, scalable
+                    applications, and continuous learning.
                   </p>
                   <div className="btn-bar">
                     <a className="px-btn px-btn-theme" href="#contactus">
@@ -86,7 +82,7 @@ const IndexVideo = () => {
       {/* End about us */}
       {/* Portfolio */}
       <Portfolio />
-      <Videos/>
+      <Videos />
       {/* End Portfolio */}
       {/* Services */}
       <Services />
